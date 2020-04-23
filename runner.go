@@ -68,7 +68,7 @@ func main() {
 // Writes files to disk, returns list of absolute filepaths
 func writeFiles(files []*InMemoryFile) ([]string, error) {
 	// Create temp dir
-	tmpPath, err := ioutil.TempDir("", "")
+	tmpPath, err := ioutil.TempDir("", "code-runner-tmp-")
 	if err != nil {
 		return nil, err
 	}
